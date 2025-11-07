@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohamed Aslam | Full Stack Developer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <h1 class="logo">Mohamed Aslam</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="content">
+      <h2 class="fade-in">Hi, I'm <span class="highlight">Mohamed Aslam</span></h2>
+      <h3 class="slide-up">Full Stack Developer & Computer Science Student</h3>
+      <p class="fade-in delay">
+        Passionate about building modern, efficient, and interactive web applications.
+        I enjoy blending creativity with logic to craft meaningful digital experiences.
+      </p>
+      <a href="#" class="btn">Download Resume</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="fade-in">
+    <h2>About Me</h2>
+    <p>
+      I'm a dedicated and detail-oriented developer currently pursuing my degree in Computer Science.
+      My focus lies in creating web-based projects that make everyday tasks easier and smarter.
+      I believe in continuous learning and enjoy experimenting with new technologies.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="slide-up">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">HTML</div>
+      <div class="skill-card">CSS</div>
+      <div class="skill-card">Python</div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="fade-in">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Real-time Weather Tracking (ESP32 + OLED)</h3>
+        <p>
+          IoT-based weather monitoring system that displays real-time temperature and humidity
+          data using ESP32 and OLED display. Designed to provide instant environmental feedback.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="slide-up">
+    <h2>Contact Me</h2>
+    <p>I'd love to connect and collaborate! Reach out through the links below.</p>
+    <div class="contact-links">
+      <a href="mailto:akaslam700@gmail.com">📧 Email</a>
+      <a href="https://github.com/aslam" target="_blank">💻 GitHub</a>
+      <a href="#">🔗 LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Mohamed Aslam. All rights reserved.</p>
+  </footer>
+
+  <!-- Animation Script -->
+  <script>
+    const elements = document.querySelectorAll('.fade-in, .slide-up');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.3 });
+    elements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
