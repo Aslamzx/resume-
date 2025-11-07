@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohamed Aslam | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1 class="logo">Mohamed Aslam</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2 class="fade-in">Full Stack Developer</h2>
+      <p class="slide-up">
+        I'm a passionate Computer Science Student specializing in full-stack development.
+        I love building creative, responsive, and dynamic web solutions.
+      </p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about fade-in">
+    <h3>About Me</h3>
+    <p>
+      Hello! I’m <span class="highlight">Mohamed Aslam</span>, a Computer Science Student
+      and aspiring Full Stack Developer. I work with technologies like HTML, CSS, and Python,
+      focusing on building efficient and elegant web applications.
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h3>Projects</h3>
+    <div class="project-card fade-in">
+      <h4>Real-time Weather Tracking (ESP32 + OLED)</h4>
+      <p>
+        IoT-based weather monitoring system using ESP32 and OLED display to show live temperature and humidity.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact fade-in">
+    <h3>Contact Me</h3>
+    <p>Let's connect! Feel free to reach out via email or social media.</p>
+    <div class="icons">
+      <a href="mailto:akaslam700@gmail.com">📧</a>
+      <a href="https://github.com/aslam" target="_blank">💻</a>
+      <a href="#">🔗</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Mohamed Aslam. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Scroll animation effect
+    const elements = document.querySelectorAll('.fade-in, .slide-up');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.3 });
+    elements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
